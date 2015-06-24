@@ -1,8 +1,4 @@
-# Iscraper
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/iscraper`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+# iScraper
 
 ## Installation
 
@@ -22,7 +18,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just simply call function like this:
+```ruby
+Iscraper.get_warranty_status(your_serial_no_or_imei)
+```
+
+You can expect to get such results:
+
+```ruby
+{
+  warranty_status: true, # Congrats, you have a valid warranty!
+  expiration_date: <Date>
+}
+```
+
+or
+
+```ruby
+{
+  warranty_status: false, # You warranty has expired :(
+  expiration_date: nil
+}
+```
+
+or
+
+```ruby
+{
+  error: "Error description" # Check your serial, imei or connection
+}
+```
 
 ## Development
 
